@@ -1,6 +1,7 @@
 <template>
     <li class="list-group-item">
-        <img :src="video.snippet.thumbnails.default.url" />
+        <img class="img-thumbnail"
+             :src="video.snippet.thumbnails.default.url" />
         {{ video.snippet.title }}
     </li>
 </template>
