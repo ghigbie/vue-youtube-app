@@ -1,7 +1,7 @@
 <template>
     <div class="container">
         <SearchBar @termChange="onTermChange"></SearchBar>
-        <VideoList> </VideoList>
+        <VideoList :videos="videos"> </VideoList>
     </div>
 </template>
 
@@ -15,6 +15,11 @@ import API_KEY from './apiKey';
 
 export default {
     name: 'App',
+    data(){
+        return {
+            videos: []
+        };
+    },
     components: {
         SearchBar,
         VideoList
@@ -29,7 +34,10 @@ export default {
                     part: 'snippet',
                     q: searchTerm
                 }
-            }).then(response => console.log(response));
+            }).then(response => {
+                this.videos = response.data.items;
+                console.log(this.videos);
+            });
         }
     }
 };
