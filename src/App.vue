@@ -8,6 +8,8 @@
 import axios from 'axios'
 
 import SearchBar from './components/SearchBar';
+import VideoList from './components/VideoList';
+
 import API_KEY from './apiKey';
 
 export default {
