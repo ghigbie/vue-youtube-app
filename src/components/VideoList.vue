@@ -1,7 +1,7 @@
 <template>
     <ul>
         VideoList
-        <li v-for="video in videos">{{ video.name }}</li>
+        {{ videos.length + 2344 }}
     </ul>
 </template>
 
