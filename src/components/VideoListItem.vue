@@ -1,8 +1,8 @@
 <template>
-    <li class="list-group-item">
-        <img class="img-thumbnail"
+    <li class="list-group-item media">
+        <img class="mr-3"
              :src="thumbnailURL" />
-        {{ videoTitle }}
+        <div class="media-body">{{ videoTitle }}</div>
     </li>
 </template>
 
