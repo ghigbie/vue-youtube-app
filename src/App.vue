@@ -5,6 +5,8 @@
 </template>
 
 <script>
+import axios from 'axios'
+
 import SearchBar from './components/SearchBar';
 import API_KEY from './apiKey';
 
@@ -16,6 +18,12 @@ export default {
     methods: {
         onTermChange(searchTerm){
             console.log(searchTerm);
+            axios.get('http://googleapis.com/youtube/v3/search', {
+                key: API_KEY,
+                type: 'video',
+                part: 'snippet',
+                q: searchTerm
+            }).then(response => console.log(response));
         }
     }
 };
