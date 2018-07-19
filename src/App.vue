@@ -1,6 +1,7 @@
 <template>
     <div class="container">
         <SearchBar @termChange="onTermChange"></SearchBar>
+        <VideoList />
     </div>
 </template>
 
@@ -15,7 +16,8 @@ import API_KEY from './apiKey';
 export default {
     name: 'App',
     components: {
-        SearchBar
+        SearchBar,
+        VideoList
     },
     methods: {
         onTermChange(searchTerm){

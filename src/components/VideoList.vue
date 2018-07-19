@@ -8,6 +8,7 @@
 export default {
     name: 'VideoList'
 };
+
 </script>
 
 <style>
