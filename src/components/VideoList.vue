@@ -3,7 +3,6 @@
         <VideoListItem v-for="video in videos"
                        :video="video"
                        :key="video.etag">
-
         </VideoListItem>
     </ul>
 </template>
