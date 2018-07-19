@@ -1,6 +1,7 @@
 <template>
     <div>
-        <input @input="onInput"/>
+        <input class="form-control" 
+               @input="onInput"/>
     </div>
 </template>
 
@@ -15,7 +16,15 @@ export default {
 };
 </script>
 
-<style>
+<style scoped>
+    input {
+        width: 75%;
+    }
+
+    div {
+        text-align: center;
+        margin: 20px
+    }
 
 </style>
 
