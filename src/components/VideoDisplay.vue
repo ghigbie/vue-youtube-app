@@ -11,10 +11,11 @@ export default {
     props: ['video'],
     computed: {
         displayImgURL(){
-            return this.video.snippet.thumbnails.high.url
+            return 'meow';
+            return this.video.snippet.thumbnails.high.url;
         },
         displayTitle(){
-            return this.video.snippet.title
+            return this.video.snippet.title;
         }
     }
 };
