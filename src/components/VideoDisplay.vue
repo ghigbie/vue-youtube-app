@@ -1,23 +1,14 @@
 <template>
-    <div>
+    <div v-if="video">
         <img :src="displayImgURL" />
-        <h2>{{ displayTitle }}</h2>
+        <h2>{{ video.snippet.title }}</h2>
     </div>
 </template>
 
 <script>
 export default {
     name: 'VideoDisplay',
-    props: ['video'],
-    computed: {
-        displayImgURL(){
-            return 'meow';
-            return this.video.snippet.thumbnails.high.url;
-        },
-        displayTitle(){
-            return this.video.snippet.title;
-        }
-    }
+    props: ['video']
 };
 </script>
 
