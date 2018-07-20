@@ -26,5 +26,11 @@ export default {
 };
 </script>
 
-<style scope>
+<style scoped>
+.details {
+    margin-top: 10px;
+    padding: 10px;
+    border: 1px solid #000;
+    border-radius: 4px;
+}
 </style>
