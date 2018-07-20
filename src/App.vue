@@ -1,7 +1,10 @@
 <template>
     <div class="container">
         <SearchBar @termChange="onTermChange"></SearchBar>
-        <VideoList :videos="videos"> </VideoList>
+        <VideoDisplay :video="video"></VideoDisplay>
+        <VideoList @videoSelect="onVideoSelect"
+                   :videos="videos"> 
+        </VideoList>
     </div>
 </template>
 
@@ -17,11 +20,13 @@ export default {
     name: 'App',
     data(){
         return {
-            videos: []
+            videos: [],
+            video: {}
         };
     },
     components: {
         SearchBar,
+        VideoDisplay,
         VideoList
     },
     methods: {
@@ -36,6 +41,10 @@ export default {
             }).then(response => {
                 this.videos = response.data.items;
             });
+        },
+        onVideoSelect(video){
+            console.log(typeof video);
+            this.video = video;
         }
     }
 };
