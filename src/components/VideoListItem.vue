@@ -14,7 +14,7 @@ export default {
    name: 'VideoListItem',
    props: ['video'],
    methods: {
-       onVideoSelect(event){
+       onVideoSelect(){
            this.$emit('videoSelect', this.video);
        }
    },

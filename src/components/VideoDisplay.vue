@@ -1,5 +1,6 @@
 <template>
-    <div v-if="video">
+    <div class="col-md-8"
+         v-if="video">
         <div class="embed-responsive embed-responsive-16by9">
             <iframe class="embed-responsive-item" 
                     :src="videoURL" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>

@@ -1,9 +1,11 @@
 <template>
     <div class="container">
         <SearchBar @termChange="onTermChange"></SearchBar>
-        <VideoDisplay :video="selectedVideo"></VideoDisplay>
-        <VideoList @videoSelect="onVideoSelect"
-                   :videos="videos"></VideoList>
+        <div class="row">
+            <VideoDisplay :video="selectedVideo"></VideoDisplay>
+            <VideoList @videoSelect="onVideoSelect"
+                    :videos="videos"></VideoList>
+        </div>
     </div>
 </template>
 
@@ -44,11 +46,10 @@ export default {
         },
         onVideoSelect(video){
             this.selectedVideo = video;
-            console.log(selectedVideo);
         }
     }
 };
 </script>
 
-<style>
+<style scoped>
 </style>
