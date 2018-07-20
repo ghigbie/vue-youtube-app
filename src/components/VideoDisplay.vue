@@ -1,7 +1,10 @@
 <template>
     <div v-if="video">
         <img :src="displayImageURL" />
-        <h2>{{ displayTitle }}</h2>
+        <div class="detail">
+            <h4>{{ displayTitle }}</h4>
+            <p>{{ displayDescription }}</p>
+        </div>
     </div>
 </template>
 
@@ -15,6 +18,9 @@ export default {
         },
         displayTitle(){
             return this.video.snippet.title;
+        },
+        displayDescription(){
+            return this.video.snippet.description
         }
     }
 };
