@@ -1,7 +1,7 @@
 <template>
     <div v-if="video">
         <img :src="displayImageURL" />
-        <div class="detail">
+        <div class="details">
             <h4>{{ displayTitle }}</h4>
             <p>{{ displayDescription }}</p>
         </div>
@@ -30,7 +30,7 @@ export default {
 .details {
     margin-top: 10px;
     padding: 10px;
-    border: 1px solid #000;
+    border: 1px solid #ddd;
     border-radius: 4px;
 }
 </style>
