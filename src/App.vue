@@ -3,8 +3,7 @@
         <SearchBar @termChange="onTermChange"></SearchBar>
         <VideoDisplay :video="video"></VideoDisplay>
         <VideoList @videoSelect="onVideoSelect"
-                   :videos="videos"> 
-        </VideoList>
+                   :videos="videos"></VideoList>
     </div>
 </template>
 
@@ -44,8 +43,8 @@ export default {
             });
         },
         onVideoSelect(video){
-            console.log(typeof video);
             this.video = video;
+            console.log(this.video);
         }
     }
 };
