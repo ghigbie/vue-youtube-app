@@ -12,6 +12,7 @@
 import axios from 'axios'
 
 import SearchBar from './components/SearchBar';
+import VideoDisplay from './components/VideoDisplay';
 import VideoList from './components/VideoList';
 
 import API_KEY from './apiKey';
