@@ -1,6 +1,9 @@
 <template>
     <div v-if="video">
-        <img :src="displayImageURL" />
+        <div class="embed-responsive embed-responsive-16by9">
+            <iframe class="embed-responsive-item" 
+                    :src="videoURL" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+        </div>
         <div class="details">
             <h4>{{ displayTitle }}</h4>
             <p>{{ displayDescription }}</p>
@@ -13,8 +16,9 @@ export default {
     name: 'VideoDisplay',
     props: ['video'],
     computed: {
-        displayImageURL(){
-            return this.video.snippet.thumbnails.high.url;
+        videoURL(){
+            const { videoId } = this.video.id;
+            return `https://www.youtube.com/embed/${videoId}`;
         },
         displayTitle(){
             return this.video.snippet.title;
