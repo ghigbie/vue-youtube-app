@@ -21,8 +21,8 @@ export default {
             this.$emit('videoSelect', video)
         }
     },
-    props: {//You have to list out all of the props this component expects to see
-        videos: Array //This is the data type that is expected
+    props: {
+        videos: Array 
     }
 };
 
